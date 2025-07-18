@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Media Enhancer</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.10.0/dist/tf.min.js"></script>
+</head>
+<body>
+  <h1>🧠 AI Image & Video Enhancer</h1>
+  <input type="file" id="fileInput" accept="image/*,video/*"><br>
+
+  <div id="progressBarWrapper">
+    <div id="progressBar"></div>
+  </div>
+
+  <div id="warning" style="display:none;">⚠️ File too large for in-browser enhancement.</div>
+
+  <div id="sliderContainer" class="slider-container">
+    <div class="image-wrapper" id="imageSliderWrapper" style="display:none;">
+      <div class="slider">
+        <img id="originalImage" />
+        <div id="sliderHandle"></div>
+        <img id="enhancedImage" />
+      </div>
+    </div>
+
+    <div id="videoViewWrapper">
+      <div id="originalPreview"></div>
+      <div id="enhancedPreview"></div>
+    </div>
+  </div>
+
+  <button id="enhanceBtn" style="display:none;">Enhance Image</button>
+  <button id="exportBtn" style="display:none;">Download Enhanced</button>
+
+  <canvas id="canvas" style="display:none;"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
